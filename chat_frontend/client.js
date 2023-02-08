@@ -14,4 +14,13 @@ navigator.mediaDevices
     document.querySelector(".js-container").appendChild(video);
   });
 
-  
+navigator.mediaDevices
+  .enumerateDevices()
+  .then(
+    devices.map(({ kind, label, deviceId }) =>
+      console.log(kind + ": " + label + " id = " + deviceId)
+    )
+  )
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  });
