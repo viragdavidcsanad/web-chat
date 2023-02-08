@@ -20,6 +20,7 @@ const io = new Server(httpServer, {
     methods: ["GET", "POST"],
   },
 });
+
 io.on("connection", (socket) => {
   console.log(`User ${socket.id} has connected`);
 });
