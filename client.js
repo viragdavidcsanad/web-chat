@@ -45,7 +45,7 @@ navigator.mediaDevices
   .enumerateDevices()
   .then((devices) => {
     let html = "";
-    [...devices].map(({ kind, label, deviceId }) => {
+    devices.map(({ kind, label, deviceId }) => {
       if (kind === "audioinput") {
         html += `<option value="${deviceId}">${label}</option>`;
       }
