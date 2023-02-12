@@ -1,4 +1,6 @@
-var socket = io("http://localhost:5000/");
+var socket = io("https://webchat-backend.azurewebsites.net/");
+// 
+// http://localhost:5000/
 
 let video = null;
 
